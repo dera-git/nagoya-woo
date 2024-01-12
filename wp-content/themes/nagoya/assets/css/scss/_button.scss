@@ -1,0 +1,86 @@
+.kl-btn-theme{
+    color: $gold;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: $bold;
+    font-family: $garamond;
+    font-style: italic;
+    background: transparent;
+    padding: 6px 15px 5px;
+    border: 1px solid $gold;
+    border-radius: 0;
+    height: 33px;
+    transition: all .3s;
+    &:hover{
+      color: $white;
+      background: $gold;
+    }
+}
+.kl-small-btn-theme{
+  font-size: 16px;
+  font-weight: $bold;
+  font-family: $garamond;
+  padding: 6px 10px 5px;
+}
+
+.kl-secondary-btn-theme{
+  background-color: $white !important;
+  border: 1px solid #9B8450 !important;
+  border-radius: 0 !important;
+  padding: 6px !important;
+  span{
+    color: $white;
+    font-weight: $regular;
+    background-color: $gold;
+    display: inline-block;
+    padding: 6px 14px;
+    min-width: 318px;
+    transition: all .3s;
+    @include media-breakpoint-down(sm){
+      min-width: auto;
+      width: 280px;
+    }
+  }
+  &:hover{
+    span{
+      background-color: $black;
+    }
+  }
+}
+.kl-big-secondary-btn-theme{
+  span{
+    padding: 28px 15px;
+  }
+}
+.kl-btn-bordered-black{
+  border: 1px solid $black;
+  border-radius: 0;
+  padding: 11px 11px;
+  transition: all .3s;
+  &:hover{
+    background: $gold;
+    color: $white;
+  }
+}
+
+@each $color, $value in $theme_colors {
+  .kl-btn-#{$color}{
+    @include button_variant($value);
+  }
+  .kl-btn-border-#{$color} {
+    @include button_border_variant($value);
+  }
+}
+
+.kl-btn-y-center{
+  padding: 5px 15px;
+  height: 33px;
+  font-family: $garamond;
+  font-size: 15px;
+  font-weight: $bold;
+  font-style: italic;
+}
+.kl-btn-h-53{
+  padding: 15px 15px;
+  height: 53px;
+}

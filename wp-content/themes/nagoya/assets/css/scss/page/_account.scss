@@ -1,0 +1,123 @@
+.kl-woocommerce-form-login {
+    max-width: 410px;
+    margin: 0 auto;
+
+    .woocommerce-form-login {
+        border-color: $gold !important;
+    }
+
+    .woocommerce-form-row label {
+        font-weight: $bold;
+    }
+
+    .woocommerce-Input {
+        border: 0;
+        border-bottom: 1px solid $gold;
+    }
+
+    .show-password-input{
+        top: 0 !important;
+    }
+
+    #rememberme {
+        accent-color: $gold;
+    }
+
+    .woocommerce-LostPassword a {
+        color: $black;
+    }
+
+    button {
+        color: $gold !important;
+        font-size: 15px !important;
+        line-height: 20px !important;
+        font-weight: $regular !important;
+        font-style: italic;
+        background: transparent;
+        padding: 6px 15px 5px!important;
+        border: 1px solid $gold !important;
+        border-radius: 0 !important;
+        height: 33px;
+        transition: all 0.3s;
+        background: transparent !important;
+        &:hover {
+            color: $white !important;
+            background: $gold !important;
+        }
+    }
+
+    .woocommerce-LostPassword{
+        color: black;
+    }
+}
+
+.kl-woocommerce-form-register {
+    max-width: 500px;
+    margin: 0 auto;
+    .woocommerce-form-register {
+        border-color: $gold !important;
+    }
+
+    .woocommerce-form-row label {
+        font-weight: $bold;
+    }
+
+    .woocommerce-Input {
+        border: 0;
+        border-bottom: 1px solid $gold;
+    }
+    button {
+        color: $gold !important;
+        font-size: 15px !important;
+        line-height: 20px !important;
+        font-weight: $regular !important;
+        font-style: italic;
+        background: transparent;
+        padding: 6px 15px 5px!important;
+        border: 1px solid $gold !important;
+        border-radius: 0 !important;
+        height: 33px;
+        transition: all 0.3s;
+        background: transparent !important;
+        &:hover {
+            color: $white !important;
+            background: $gold !important;
+        }
+    }
+    .woocommerce-privacy-policy-text {
+        margin-bottom: 10px;
+    }
+}
+
+.woocommerce-privacy-policy-text {
+    a {            
+        color: $gold;
+        font-style: italic;
+    }
+}
+
+.woocommerce-MyAccount-navigation.kl-woocommerce-MyAccount-navigation {
+    width: 20%;
+    ul {
+        list-style: none;
+        text-align: left;
+
+        li a {
+            color: black;
+            &.is-active,
+            &:hover {
+                color: $gold;
+            }
+        }
+    }
+}
+
+.kl-account-dashboard a {
+    color: $black;
+    font-weight: $bold;
+}
+
+.restore-item {
+    font-weight: $bold;
+    color: $gold;
+}

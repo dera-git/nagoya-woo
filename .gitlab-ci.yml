@@ -1,0 +1,31 @@
+default:
+
+stages:
+  - deploy
+
+deploy_develop:
+  stage: deploy
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "master"'
+      when: always
+  variables:
+    env : "develop" 
+  script:
+    - echo "build and deploy dans DEV. Using BRANCH= MASTER"
+    - id
+    - ssh -o StrictHostKeyChecking=no livenexx@5.135.17.61 "cd /var/www/html/wordpress/nagoya && git stash && git switch master && git pull"
+
+deploy_preprod:
+  stage: deploy
+  only:
+    - tags
+  variables:
+    env : "preprod"
+  script:
+    - echo "build and deploy dans RECETTE. Using TAG= $CI_COMMIT_TAG"
+    - id
+    - ssh -o StrictHostKeyChecking=no livenexx@5.135.17.61 "cd /var/www/html/wordpress/nagoya && git stash && git switch master && git pull --all &>/dev/null && git fetch"
+    - ssh -o StrictHostKeyChecking=no livenexx@5.135.17.61 "cd /var/www/html/wordpress/nagoya && git branch -D latest &>/dev/null"
+    - ssh -o StrictHostKeyChecking=no livenexx@5.135.17.61 "cd /var/www/html/wordpress/nagoya && git checkout tags/$CI_COMMIT_TAG -b latest"

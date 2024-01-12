@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 3672.7 372" style="enable-background:new 0 0 3672.7 372;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
+	.st2{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:7.94;stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:8;stroke-miterlimit:10;}
+	.st4{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:4.03;stroke-miterlimit:10;}
+</style>
+<g>
+	<g>
+		<polygon class="st0" points="2686.7,289.5 2679.4,236.4 2724.8,122.3 2912.6,59.9 2981.9,122.3 3004.3,179.3 2997,223.7 
+			2881.1,324.6 2734.9,324.6 		"/>
+		<polyline class="st0" points="2912.6,59.9 2914.5,111.2 2981.9,122.3 		"/>
+		<line class="st1" x1="2724.8" y1="122.3" x2="2734.9" y2="160.9"/>
+		<polyline class="st0" points="2686.7,289.5 2721.9,266.4 2734.9,160.9 2914.5,111.2 		"/>
+		<line class="st1" x1="2734.9" y1="324.6" x2="2721.9" y2="266.4"/>
+	</g>
+	<polyline class="st0" points="2881.1,324.6 2923.8,254.5 2966.5,192.2 2914.5,111.2 	"/>
+	<line class="st1" x1="2966.5" y1="192.2" x2="3004.3" y2="179.3"/>
+</g>
+<g>
+	<polygon class="st2" points="2882.7,184.8 2841.9,184.8 2801.1,184.8 2781.9,201.9 2841.9,261.4 2901.8,201.9 	"/>
+	<polyline class="st0" points="2841.9,184.8 2868.4,202.3 2877,184.8 2901.8,201.9 2841.9,202.3 	"/>
+	<line class="st1" x1="2841.9" y1="261.4" x2="2868.4" y2="202.3"/>
+	<polyline class="st0" points="2841.9,184.8 2815.3,202.3 2806.7,184.8 2781.9,201.9 2841.9,202.3 	"/>
+	<line class="st1" x1="2841.9" y1="261.4" x2="2815.4" y2="202.3"/>
+</g>
+<path class="st3" d="M2759.5,108.1c0,0,3-26.8,17.1-34.2c-14.1-7.4-17.1-34.2-17.1-34.2s-3,26.8-17.1,34.2
+	C2756.5,81.2,2759.5,108.1,2759.5,108.1z"/>
+<path class="st4" d="M2804.4,146.3c0,0,1.7-12.4,9.6-15.8c-7.9-3.4-9.6-15.8-9.6-15.8s-1.7,12.4-9.6,15.8
+	C2802.7,134,2804.4,146.3,2804.4,146.3z"/>
+</svg>

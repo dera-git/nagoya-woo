@@ -1,0 +1,48 @@
+.kl-text-12 {
+  @include text_12();
+}
+.kl-text-14 {
+  @include text_14();
+  h3, h4{
+    @include text_14();
+  }
+}
+.kl-text-15 {
+  @include text_15();
+  h2, h3, h4{
+    @include text_15();
+  }
+}
+.kl-text-17 {
+  @include text_17();
+  h2, h3, h4{
+    @include text_17();
+  }
+}
+
+.kl-text-20 {
+  @include text_20();
+  h3, h4, p, span{
+    @include text_20();
+  }
+}
+
+.kl-text-18 {
+  @include text_18();
+  h3, h4{
+    @include text_18();
+  }
+}
+
+.kl-text-25 {
+  @include text_25();
+  h2, h3, h4{
+    @include text_25();
+  }
+}
+.kl-text-30 {
+  @include text_30();
+  h1, h2, h3{
+    @include text_30();
+  }
+}

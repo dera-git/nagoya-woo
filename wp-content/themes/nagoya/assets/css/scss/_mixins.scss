@@ -1,0 +1,119 @@
+//bg color
+@mixin bg_variant($bg) {
+  background-color: $bg !important;
+}
+
+//color
+@mixin color_variant($color) {
+  color: $color !important;
+}
+
+//font-weight
+@mixin font_familly($value) {
+  font-family: $value !important;
+}
+
+//font-weight
+@mixin font_weight($value) {
+  font-weight: $value !important;
+  h1, h2, h3{
+    font-weight: $value !important;
+  }
+}
+
+//line-height
+@mixin line_height($val) {
+  line-height: $val !important;
+}
+
+//z-index
+@mixin z_index($val) {
+  z-index: $val !important;
+}
+
+//button variant
+@mixin button_variant($color){
+  background: $color;
+  transition: $transition;
+  &:hover{
+    background: darken($color, 8%);
+    transition: $transition;
+  }
+}
+
+@mixin button_border_variant($color){
+  background: transparent;
+  border: 1px solid $color !important;
+  color: $color !important;
+  transition: $transition;
+  &:hover{
+    border: 1px solid darken($color, 40%) !important;
+    color: darken($color, 40%) !important;
+    transition: $transition;
+  }
+}
+
+@mixin text_12 {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@mixin text_14 {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+@mixin text_15 {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+@mixin text_17 {
+  font-size: 17px;
+  line-height: 20px;
+}
+
+@mixin text_20 {
+  font-size: 16px;
+  line-height: 23px;
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+
+@mixin text_18 {
+  font-size: 16px;
+  line-height: 22px;
+  @include media-breakpoint-up(lg) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@mixin text_20 {
+  font-size: 16px;
+  line-height: 23px;
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+
+@mixin text_25 {
+  font-size: 20px;
+  line-height: 28px;
+  @include media-breakpoint-up(lg) {
+    font-size: 25px;
+    line-height: 33px;
+  }
+}
+
+@mixin text_30 {
+  font-size: 23px;
+  line-height: 29px;
+  @include media-breakpoint-up(lg) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}

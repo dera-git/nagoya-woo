@@ -1,0 +1,106 @@
+%text-style{
+    @include text_14();
+    line-height: 25px;
+    font-family: $avenir;
+    font-weight: $light;
+    color: $black;
+}
+.kl-contact-footer{
+    span{
+        @extend %text-style;
+    }
+}
+footer{
+    padding: 0 0 72px;
+    @include media-breakpoint-down(lg){
+        text-align: center
+    }
+    .widget-title,
+    .kl-contact-footer a{
+        @extend %text-style;
+    }
+    .kl-social-network{
+        @include media-breakpoint-down(lg){
+            justify-content: center;
+        }
+    }
+}
+.kl-menu-footer{
+    li{
+        a{
+            @extend %text-style;
+            transition: all .25s;
+            &[aria-current="page"],
+            &:hover{
+                color: $gold;
+            }
+        }
+    }
+}
+.kl-newsletter{
+    @include media-breakpoint-down(lg){
+        max-width: 414px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include media-breakpoint-up(xxl){
+        padding: 0 70px;
+    }
+    @include media-breakpoint-up(xl){
+        padding: 0 35px;
+    }
+    form{
+        text-align: right;
+        @include media-breakpoint-down(lg){
+            text-align: center;
+        }
+    }
+    input:not([type="submit"]){
+        border: none !important;
+        border-bottom: 1px solid $grey !important;
+        background-color: transparent !important;
+        padding-top: 2px !important;
+        padding-bottom: 4px !important;
+        &:-moz-placeholder,
+        &::-moz-placeholder{
+            font-size: 0;
+        } 
+        &:-ms-input-placeholder{
+            font-size: 0;
+        }
+        &::-webkit-input-placeholder,
+        &::placeholder{
+            font-size: 0;
+        }
+    }
+    input[type="submit"]{
+        font-size: 14px !important;
+        line-height: 20px !important;
+        font-weight: $light;
+        font-style: italic;
+        padding: 6px 15px 5px !important;
+        border-radius: 0 !important;
+        height: 33px !important;
+        transition: all .3s;
+        background-color: transparent !important;
+        color: $black !important;
+        border: 1px solid $grey !important;
+        max-width: 226px;
+        margin-top: 26px !important;
+        &:hover{
+            color: $white !important;
+            background: $gold !important;
+            border: 1px solid $gold!important;
+        }
+    }
+}
+
+.kl-footer-logo{
+    border-top: 1px solid $gold;
+    padding-top: 60px;
+}
+.kl-footer-product{
+    .kl-footer-logo{
+        border-top: none;
+    }
+}

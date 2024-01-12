@@ -1,0 +1,153 @@
+//font family
+$avenir: 'Avenir';
+$garamond: 'Garamond Premiere Pro';
+$montserrat: 'Montserrat', sans-serif;
+
+//font weight
+$extra_bold: 900;
+$bold: 700;
+$semi_bold: 600;
+$medium: 500;
+$regular: 400;
+$light: 300;
+
+//color
+$black: #000000;
+$white: #ffffff;
+$gold: #9B8450;
+$green-theme: #11302C;
+$grey: #707070;
+
+//theme color class
+$theme_colors: (
+  "black": $black,
+  "white": $white,
+  "gold": $gold,
+  "green-theme": $green-theme,
+);
+
+// font-familly
+$font_familly: (
+  "avenir": $avenir,
+  "garamond": $garamond,
+  "montserrat": $montserrat,
+);
+
+//font-weight
+$font_weight: (
+  "extra-bold": $extra_bold,
+  "bold": $bold,
+  "semi-bold": $semi_bold,
+  "medium": $medium,
+  "regular": $regular,
+  "light": $light,
+);
+
+//max value
+$max_value: (
+  "none": none,
+  "110": 110px,
+  "226": 226px,
+  "250": 250px,
+  "260": 260px,
+  "350": 350px,
+  "565": 565px,
+  "667": 667px,
+  "708": 708px,
+  "750": 750px,
+  "950": 950px,
+  "1013": 1013px,
+  "1088": 1088px,
+  "1379": 1379px,
+  "1275": 1275px,
+);
+
+$separator_height: (
+  "none": none,
+  "70": 70px,
+  "72": 72px,
+  "112": 112px,
+  "105": 105px,
+  "130": 130px,
+);
+
+$line_height: (
+  "1": 1,
+  "1_2": 1.2,
+  "1_3": 1.3,
+  "1_4": 1.4,
+  "1_5": 1.5,
+  "1_188": 2.188,
+  "1_875": 1.875,
+);
+
+//z-index
+$z_index: (
+  "-1": -1,
+  "0": 0,
+  "1": 1,
+  "2": 2,
+  "3": 3,
+  "4": 4,
+  "5": 5,
+);
+
+//grid breakpoint bootstrap
+$grid-breakpoints: (
+  xs: 0,
+  xs_375: 375px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl_1366: 1366px,
+  xxl: 1400px,
+  xxl_1680: 1680px,
+);
+
+$spacing: (
+  "0": 0px,
+  "10": 10px,
+  "16": 16px,
+  "20": 20px,
+  "25": 25px,
+  "30": 30px,
+  "35": 35px,
+  "40": 40px,
+  "50": 50px,
+  "55": 55px,
+  "60": 60px,
+  "70": 70px,
+  "75": 75px,
+  "80": 80px,
+  "85": 85px,
+  "90": 90px,
+  "100": 100px,
+  "107": 107px,
+  "110": 110px,
+  "115": 115px,
+  "135": 135px,
+  "149": 149px,
+  "172": 172px,
+  "175": 175px,
+  "192": 192px,
+);
+
+$sides-direction: (
+  "t": top,
+  "b": bottom,
+  "s": left,
+  "e": right,
+);
+
+//bs breakpoint  custom gutter
+$bs-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxl_1680: 1680px,
+);
+
+$transition: all 0.3s ease-in-out;

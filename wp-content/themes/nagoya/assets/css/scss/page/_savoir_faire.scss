@@ -1,0 +1,133 @@
+.kl-sect-savoir-faire{
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 50px;
+    @include media-breakpoint-down(xl){
+        padding-top: 20px;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 460px;
+        background: $green-theme;
+        z-index: -1;
+        @include media-breakpoint-down(xl){
+            height: 155px;
+        }
+    }
+    .kl-title-savoir-faire{
+        padding-top: 115px;
+        padding-bottom: 215px;
+        @include media-breakpoint-down(xl){
+            padding-top: 35px;
+            padding-bottom: 60px;
+        }
+    }
+    .kl-separator-line{
+        top: -175px;
+    }
+    .kl-description{
+        font-family: $garamond;
+        font-style: italic;
+        font-size: 20px;
+        text-align: center;
+        @include media-breakpoint-down(md){
+            font-size: 18px;
+        }
+    }
+    .kl-image-thumbnail{
+        max-width: 589px;
+        height: 735px;
+        text-align: center;
+        position: relative;
+        top: -100px;
+        @include media-breakpoint-down(xl){
+            top: 0;
+            max-width: 100%;
+            height: 400px;
+        }
+        @include media-breakpoint-down(md){
+            height: 300px;
+        }
+        img{
+            object-fit: cover !important;
+            max-width: 100% !important;
+        }
+    }
+}
+.kl-savoir-faire-chap1{
+    padding-bottom: 90px;
+    @include media-breakpoint-down(xl){
+        padding-bottom: 42px;
+    }
+    @include media-breakpoint-down(md){
+        padding-bottom: 0;
+    }
+    .kl-img-illustration{
+        text-align: center;
+        height: 513px;
+        @include media-breakpoint-down(md){
+            height: 300px;
+        }
+    }
+}
+.kl-savoir-faire-chap2{
+    padding: 122px 0 148px;
+    @include media-breakpoint-down(xl){
+        padding: 42px 0 48px;
+    }
+    .kl-img-illustration{
+        img{
+            max-width: 763px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.kl-savoir-faire-chap4{
+    position: relative;
+    padding: 80px 0 100px;
+    &::before{
+        content: "";
+        background: $green-theme;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 505px;
+        z-index: -1;
+        @include media-breakpoint-down(xxl){
+            height: 395px;
+        }
+        @include media-breakpoint-down(xl){
+            height: 305px;
+        }
+    }
+    &::after{
+        content: "";
+        background: $gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+    }
+}
+.kl-img-column{
+    height: 745px;
+    @include media-breakpoint-down(xxl_1680){
+        height: 645px;
+    }
+    @include media-breakpoint-down(xxl){
+        height: 500px;
+    }
+    @include media-breakpoint-down(xl){
+        height: 400px;
+    }
+    @include media-breakpoint-down(lg){
+        height: 300px;
+    }
+}

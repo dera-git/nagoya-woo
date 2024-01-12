@@ -1,0 +1,186 @@
+Installation
+------------
+
+Dans votre tableau de bord WordPress, rendez-vous dans l'onglet Extensions puis cliquez sur Ajouter. Choisissez l'option Téléverser une extension puis cliquez sur le bouton parcourir pour sélectionner l'extension depuis votre ordinateur. Cliquez sur Installer maintenant pour lancer l'installation. Activez l'extension à la fin de l'installation.
+
+Réglages
+--------
+
+Si vous ne souhaitez pas vous lancer dans l'installation et le paramétrage de votre solution bancaire et de cette passerelle de paiement, vous pouvez nous confier cette tâche. Plus d'informations à cette adresse : https://www.absoluteweb.net/boutique/installation-parametrage-test-passerelle-paiement/
+
+Pour rendre fonctionnelle votre solution bancaire, vous devez communiquer par e-mail au service technique de la banque l'URL de retour automatique (CGI2), celle-ci est http(s)://(www.)votre-site.fr/wc-api/wc_gateway_monetico (remplacer le nom de domaine par le votre). Attention à ne pas faire d'erreur lors de la transmission de l'URL (tirets, underscore). Attendez le retour de Monetico pour effectuer vos tests. L'URL exacte est indiquée sur la page de réglages de la passerelle.
+
+Pour régler votre passerelle de paiement Monetico, rendez-vous dans l'onglet WooCommerce > Réglages, cliquez sur l'onglet Paiements. La passerelle Monetico doit être présente dans la liste des passerelles. Cliquez sur le bouton Gérer pour accéder aux réglages de la passerelle.
+
+- Cochez "Activer le paiement Monetico" pour le rendre disponible à vos clients lors du règlement de leurs commandes.
+- Adaptez le titre, le message et l'icône de paiement selon vos préférences. Ces trois éléments sont affichés au client lors du choix de son mode de paiement.
+- Sélectionnez le mode d'utilisation de la passerelle, Test ou Production. Trois tests réussis sont nécessaires avant de pouvoir demander le passage en production auprès de Monetico Paiement.
+- Renseignez la clé sécurisée, le numéro de TPE et le code société qui sont des paramètres transmis par Monetico Paiement.
+- Renseignez la devise utilisée sur la boutique, le pays du commerçant.
+- Dans le cadre de 3DSecure 2, indiquez votre souhait pour le traitement des transactions.
+- Personnalisez si vous le souhaitez le texte du bouton d'envoi sur le serveur de la banque.
+- Cochez ou non la case de redirection automatique sur le serveur bancaire. Le cas échéant personnalisez le texte de redirection.
+- Si vous avez souscrit l'option "Paiement Express" auprès de Monetico (à partir du Pack+), vous pouvez activer la prise en charge en cochant l'option correspondante.
+- Si vous avez souscrit l'option "iframe" auprès de Monetico (à partir du Pack+), vous pouvez activer la prise en charge en cochant l'option correspondante.
+- Si vous avez activé des paiements partenaires sur votre contrat Monetico (Cofidis, Paypal, lyf pay), vous pouvez lister les moyens de paiements correspondants. Après enregistrement des réglages, vous retrouverez les passerelles de paiement correspondantes dans l'onglet Paiements de WooCommerce avec des réglages spécifiques (voir plus bas).
+- Si vous disposez d'un contrat Monetico paiement fractionné (en plusieurs fois), vous pouvez lister les échéances à proposer à vos clients (2x, 3x et 4x). En sélectionnant au moins une des échéances vous serez invité à renseigner les éléments Monetico du contrat (TPE, code société, clé sécurisée). Une fois les réglages enregistrés, vous retrouverez les moyens de paiement correspondants dans l'onglet Paiements de WooCommerce pour des réglages spécifiques (voir plus bas).
+- Pour enregistrer des logs (erreurs, retour de la banque), renseignez le chemin absolu et le nom d'un fichier texte. Le dossier doit exister et être accessible en écriture. Exemple : /home/mon_site/www/wp-content/uploads/wc-logs/monetico.log.
+- En phase de test, vous pouvez cocher l'affichage du débogage pour visualiser les données envoyées à la banque et autres paramètres utiles.
+
+N'oubliez pas d'enregistrer les modifications.
+
+Consultez notre tutorial vidéo de paramétrage de la passerelle de paiement Monetico Paiement sur cette adresse https://youtu.be/qMe5xGY5u2s
+
+
+Réglages spécifiques aux passerelles des moyens de paiement partenaires
+-----------------------------------------------------------------------
+
+Pour activer les passerelles des moyens de paiement partenaires, vous devez sélectionner ces moyens dans les réglages principaux Monetico (voir ci-dessus). Après validation de votre liste de paiements partenaires, les passerelles correspondantes doivent être présentes dans la liste des passerelles. Cliquez sur le bouton Gérer pour accéder aux réglages de la passerelle de votre choix.
+
+Cochez "Activer le paiement ..." pour le rendre disponible à vos clients lors du règlement de leurs commandes.
+Adaptez le titre, le message et l'icône de paiement selon vos préférences. Ces trois éléments sont affichés au client lors du choix de son moyen de paiement.
+Définissez si nécessaire les montants minimum et/ou maximum pour lesquels le moyen de paiement doit être proposé lors d'une commande.
+
+Ces réglages sont similaires sur l'ensemble des moyens de paiement partenaires; 1euro, 3xCB Cofidis, 4xCB Cofidis, Paypal et lyf pay.
+
+Vidéo de demonstration des paiements partenaires : https://youtu.be/xAfn_i0vaA8
+
+
+Réglages spécifiques aux passerelles des moyens de paiement en plusieurs fois
+-----------------------------------------------------------------------------
+
+Pour activer les passerelles des moyens de paiement en plusieurs fois, vous devez sélectionner ces moyens dans les réglages principaux Monetico (voir ci-dessus). Après validation de votre liste de paiements en plusieurs fois, les passerelles correspondantes doivent être présentes dans la liste des passerelles. Cliquez sur le bouton Gérer pour accéder aux réglages de la passerelle de votre choix.
+
+Cochez "Activer le paiement ..." pour le rendre disponible à vos clients lors du règlement de leurs commandes.
+Adaptez le titre, le message et l'icône de paiement selon vos préférences. Ces trois éléments sont affichés au client lors du choix de son moyen de paiement.
+Définissez si nécessaire les montants minimum et/ou maximum pour lesquels le moyen de paiement doit être proposé lors d'une commande.
+
+Ces réglages sont similaires sur l'ensemble des moyens de paiement en plusieurs fois; 2x, 3x et 4x.
+
+Vidéo de demonstration des paiements en plusieurs fois : https://youtu.be/YKGpgjeuL8U
+
+
+URL de l'extension
+------------------
+
+https://www.absoluteweb.net/prestations/wordpress-woocommerce-extensions-traductions/woocommerce-monetico/
+
+
+Les actions
+-----------
+
+Vous disposez d'actions pour intéragir avec la passerelle :
+monetico_tableau_retour_banque : pour récupérer le tableau des données renvoyées par la banque après paiement, par exemple pour utiliser la date de validité de la care bancaire.
+
+
+Les filtres
+-----------
+
+Vous disposez de divers filtres pour modifier dynamiquement textes, variables ou URL :
+monetico_change_cle : pour modifier la clé sécurisée.
+monetico_change_tpe : pour modifier le numéro de TPE.
+monetico_change_code_societe : pour modifier le code société.
+monetico_change_bank_msg : pour modifier le message indiquant de cliquer sur le bouton pour ce rendre sur le serveur de la banque.
+monetico_change_bouton : pour traduire ou modifier le texte du bouton de connexion à la banque.
+monetico_change_msg_redirection : pour traduire ou modifier le texte de redirection vers la banque.
+monetico_change_url_ok : pour modifier l'URL de retour OK.
+monetico_change_url_ko : pour modifier l'URL de retour NOT OK.
+monetico_change_liste_statuts_ok : pour modifier la liste des statuts d'un paiement réussi.
+monetico_change_devise : pour modifier la devise envoyée à Monetico.
+monetico_change_langue : pour modifier la langue envoyée à Monetico.
+monetico_change_montant_a_payer : pour modifier le montant à payer en banque (Attention ne modifie pas le montant de la commande WooCommerce).
+monetico_change_montant_paye : pour modifier le montant payé affiché sur la page de remerciement, par exemple pour les acomptes.
+monetico_change_texte_libre : pour modifier le texte libre transmis à Monetico, contient l'e-mail client par défaut.
+monetico_change_facturation_prenom : pour modifier le prénom de facturation envoyé à Monetico pour 3DSecure 2.
+monetico_change_facturation_nom : pour modifier le nom de facturation envoyé à Monetico pour 3DSecure 2.
+monetico_change_facturation_email : pour modifier l'e-mail de facturation envoyé à Monetico pour 3DSecure 2.
+monetico_change_facturation_adresse_1 : pour modifier l'adresse ligne 1 de facturation envoyé à Monetico pour 3DSecure 2.
+monetico_change_facturation_adresse_2 : pour modifier l'adresse ligne 2 de facturation envoyée à Monetico pour 3DSecure 2.
+monetico_change_facturation_cp : pour modifier le code postal de facturation envoyé à Monetico pour 3DSecure 2.
+monetico_change_facturation_ville : pour modifier la ville de facturation envoyée à Monetico pour 3DSecure 2.
+monetico_change_facturation_pays : pour modifier le pays de facturation envoyé à Monetico pour 3DSecure 2.
+monetico_change_expedition_prenom : pour modifier le prénom d'expédition envoyé à Monetico pour 3DSecure 2.
+monetico_change_expedition_nom : pour modifier le nom d'expédition envoyé à Monetico pour 3DSecure 2.
+monetico_change_expedition_adresse_1 : pour modifier l'adresse ligne 1 d'expédition envoyée à Monetico pour 3DSecure 2.
+monetico_change_expedition_adresse_2 : pour modifier l'adresse ligne 2 d'expédition envoyée à Monetico pour 3DSecure 2.
+monetico_change_expedition_cp : pour modifier le code postal d'expédition envoyé à Monetico pour 3DSecure 2.
+monetico_change_expedition_ville : pour modifier la ville d'expédition envoyée à Monetico pour 3DSecure 2.
+monetico_change_expedition_pays : pour modifier le pays d'expédition envoyé à Monetico pour 3DSecure 2.
+monetico_change_ThreeDSecureChallenge : pour modifier le souhait concernant le challenge 3DSecure 2.
+
+Exemples :
+
+Outrepasser les paramètres dans le processus aller.
+
+add_action('before_woocommerce_pay', 'abw_change_monetico');
+function abw_change_monetico() {
+	add_filter('monetico_change_url_ko', 'new_ko'); // Modification de l'URL NOT OK
+	add_filter('monetico_change_cle', 'new_cle'); // Modification de la clé sécurisée
+	add_filter('monetico_change_bouton', 'new_bouton'); // Modification du texte du bouton de connexion
+	add_filter('monetico_change_devise', 'new_devise'); // Modification de la devise de paiement
+	add_filter('monetico_change_facturation_pays', 'new_pays'); // Modification du pays pour 3DSecure 2
+	add_filter('monetico_change_texte_libre', 'new_txt_libre', 10, 2); // Modification du texte libre (e-mail par défaut)
+}
+function new_bouton($bouton) {
+	return 'Mon texte de bouton';	
+}
+function new_cle($cle) {
+	return '12345678901234567890123456789012345678P0';	
+}
+function new_ko($url) {
+  return "http://www.mon-site.fr/mon-url-not-ok/";
+}
+function new_devise($devise) {
+  return get_woocommerce_currency();
+}
+function new_pays($pays) {
+	return 'FR'; // Si vous avez supprimé le champ pays de la page de commande, vous pouvez forcer cette information obligatoire pour 3DSecure 2.	
+}
+function new_txt_libre($txt, $order) { // Envoyer le nom du client en texte libre pour le rapprochement bancaire (champ présent dans le journal quotidient)
+	$facturation_prenom = is_callable( array( $order, 'get_billing_first_name' ) ) ? $order->get_billing_first_name() : $order->shipping_first_name;
+	$facturation_nom = is_callable( array( $order, 'get_billing_last_name' ) ) ? $order->get_billing_last_name() : $order->shipping_last_name;
+	return $facturation_prenom.' '.$facturation_nom; 	
+}
+
+Outrepasser les paramètres dans le processus retour.
+
+add_action( 'woocommerce_api_wc_gateway_monetico', 'abw_change_tpe_cle', 9);
+function abw_change_tpe_cle(){
+	if (isset($_GET['wc-api']) && $_GET['wc-api'] == 'WC_Gateway_Monetico' && isset($_POST['TPE']) && $_POST['TPE'] == '0123456'):
+		add_filter('monetico_change_tpe', 'abw_new_tpe_retour');
+		add_filter('monetico_change_cle', 'abw_new_cle_retour');
+	endif;
+}
+function abw_new_tpe_retour() {
+	return '0123456';
+}
+function abw_new_cle_retour() {
+	return '0123456789ABCDFE';
+}
+
+Ajouter un statut de commande considéré comme un paiement réussi
+
+add_filter( 'monetico_change_liste_statuts_ok', 'abw_change_liste_statuts_ok' );
+function abw_change_liste_statuts_ok($statuts) {
+	$statuts[] = 'partially-paid'; // Ajout du statut de l'extension WooCommerce Deposit
+	return $statuts;
+}
+
+Modifier le montant encaissé, par exemple pour le paiement d'un acompte
+
+add_filter('monetico_change_montant_paye', 'new_montant'); // Modification du montant payé sur la page de remerciement
+function new_montant($montant) {
+  return "150,00€";
+}
+
+Activation de la licence
+------------------------
+
+Vous bénéficiez d'un an de support et de mises à jour lors de l'achat de votre passerelle. Pour activer votre licence et être automatiquement informé des mises à jour, vous devez activer votre licence.
+Dans votre tableau de bord WordPress, rendez-vous dans Réglages > Licence Passerelle Monetico.
+Renseignez votre clé de licence ainsi que votre e-mail de commande. Ces éléments vous ont été envoyés par e-mail lors de la validation de votre achat. Vous pouvez également les retrouver sur votre compte ABSOLUTE Web à l'adresse https://www.absoluteweb.net/mon-compte/.
+Pensez à cliquer sur "Enregistrer les changements" pour que votre licence s'active.
+Si vous devez déplacer votre site, vous devrez désactiver la licence sur le site actuel pour pouvoir la réactiver sur un autre site. Passez par l'onglet "Désactivation de la Licence" pour cela.
+
+Le fonctionnement de la licence en vidéo :
+https://www.youtube.com/watch?v=9a9IAUimOmM

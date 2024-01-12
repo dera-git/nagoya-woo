@@ -1,0 +1,277 @@
+%after-line{
+    content: '';
+    position: absolute;
+    border-right: 1px solid $gold;
+    top: 0;
+    z-index: -1;
+}
+.kl-section-header-taxonomy{
+    position: relative;
+    padding-top: 154px;
+    @include media-breakpoint-down(md){
+        padding-top: 115px;
+    }
+    &::before{
+        @extend %before-theme;
+        width: 100%;
+        height: 64px;
+        top: 0;
+    }
+}
+.kl-separator-position{
+    top: 8px;
+}
+.kl-bloc-title-cat{
+    .kl-title-category{
+        &:first-of-type{
+            @include text_30();
+            font-family: $montserrat;
+            font-weight: $semi_bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        &:last-of-type{
+            @include text_30();
+            font-family: $garamond;
+            font-weight: $light;
+            font-style: italic;
+        }
+    }
+}
+.kl-section-product-cat{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @include media-breakpoint-down(md){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+// .kl-cart-product-cat{
+//     position: relative;
+//     @include media-breakpoint-down(lg){
+//         &::after{
+//             border: none !important;
+//         }
+//     }
+//     // @include media-breakpoint-down(md){
+//     //     flex-direction: column-reverse !important;
+//     // }
+//     & + .kl-cart-product-cat{
+//         padding-top: 120px;
+//         @include media-breakpoint-down(xl){
+//             padding-top: 80px;
+//         }
+//         @include media-breakpoint-down(md){
+//             padding-top: 40px;
+//         }
+//     }
+//     &:first-of-type,
+//     &:last-of-type{
+//         &::after{
+//             border: none !important;
+//         }
+//     }
+//     &:not(.kl-mt--neg2, .kl-mt--neg5){
+//         position: relative;
+//         z-index: 1;
+//     }
+//     .kl-col-image{
+//         flex: 0 0 auto;
+//     }
+//     .kl-btn-theme{
+//         @include media-breakpoint-down(md){
+//             margin: auto !important;
+//         }
+//     }
+// }
+
+.kl-big-card-product{
+    @include media-breakpoint-down(lg){
+        &::after{
+            border: none !important;
+        }
+    }
+    .kl-col-image{
+        width: 950px;
+        height: 540px;
+        @include media-breakpoint-down(xxl_1680){
+            width: 790px;
+            height: 470px;
+        }
+        @include media-breakpoint-down(xxl){
+            width: 640px;
+            height: 370px;
+        }
+        @include media-breakpoint-down(xl){
+            width: 540px;
+            height: 320px;
+        }
+        @include media-breakpoint-down(lg){
+            width: 440px;
+            height: 240px;
+        }
+        @include media-breakpoint-down(md){
+            width: 100%;
+        }
+    }
+}
+.kl-small-card-product{
+    .kl-col-image{
+        width: 536px;
+        height: 780px;
+        @include media-breakpoint-down(xxl_1680){
+            width: 405px;
+            height: 615px;
+        }
+        @include media-breakpoint-down(xxl){
+            width: 395px;
+            height: 545px;
+        }
+        @include media-breakpoint-down(xl){
+            width: 338px;
+            height: 445px;
+        }
+        @include media-breakpoint-down(lg){
+            width: 250px;
+            height: 380px;
+        }
+        @include media-breakpoint-down(md){
+            width: 100%;
+            height: 240px;
+        }
+    }
+}
+.kl-card-in-right{
+    &:after{
+        @extend %after-line;
+        height: calc(100% + 160px);
+        left: 152px;
+        @include media-breakpoint-down(xxl_1680){
+            left: 95px;
+        }
+        @include media-breakpoint-down(xxl){
+            left: 65px;
+        }
+    }
+    .kl-col-text{
+        margin-right: 45px;
+        @include media-breakpoint-down(lg){
+            margin-right: 30px;
+        }
+        @include media-breakpoint-down(md){
+            margin-right: 0;
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+.kl-card-in-left{
+    &:after{
+        @extend %after-line;
+        height: calc(100% + 160px);
+        right: 152px;
+        @include media-breakpoint-down(xxl_1680){
+            right: 95px;
+        }
+        @include media-breakpoint-down(xxl){
+            right: 65px;
+        }
+    }
+    .kl-col-text{
+        margin-left: 45px;
+        @include media-breakpoint-down(lg){
+            margin-left: 30px;
+        }
+        @include media-breakpoint-down(md){
+            margin-left: 0;
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+.kl-mt--neg2{
+    margin-top: -215px;
+    @include media-breakpoint-down(xl){
+        margin-top: 0;
+    }
+}
+.kl-mt--neg5{
+    margin-top: -400px;
+    @include media-breakpoint-down(xxl){
+        margin-top: -215px;
+    }
+    @include media-breakpoint-down(xl){
+        margin-top: 0;
+    }
+}
+.kl-max-width{
+    @include media-breakpoint-up(xl){
+        max-width: 265px;
+    }
+    @include media-breakpoint-up(xxl){
+        max-width: 410px;
+    }
+    @include media-breakpoint-up(xxl_1680){
+        max-width: 455px;
+    }
+}
+.kl-text-type{
+    @include media-breakpoint-down(md){
+        text-align: center !important;
+    }
+}
+
+.kl-section-video-category{
+    padding-bottom: 190px;
+    @include media-breakpoint-down(xxl_1680){
+        padding-bottom: 100px;
+    }
+    @include media-breakpoint-down(md){
+        padding-bottom: 60px;
+    }
+}
+.kl-section-product-cat{
+    .kl-thumb-product-cat{
+        height: 517px;
+        @include media-breakpoint-down(xxl){
+            height: 352px;
+        }
+    }
+
+    .kl-link {
+        color: $black;
+    }
+}
+
+// animation load more post
+.kl-product-cat-col.show {
+    -webkit-animation: in 1s ease both;
+    animation: in 1s ease both;
+}
+
+.kl-product-cat-col.hide {
+    -webkit-animation: out 1s ease both;
+    animation: out 1s ease both;
+}
+
+@-webkit-keyframes in {
+    0% { opacity: 0; visibility: hidden;  }
+    100% { opacity: 1; visibility: visible; }
+}
+
+@keyframes in {
+    0% { opacity: 0; visibility: hidden;  }
+    100% { opacity: 1; visibility: visible; }
+}
+
+@-webkit-keyframes out {
+    0% { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes out {
+    0% { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden;  }
+}

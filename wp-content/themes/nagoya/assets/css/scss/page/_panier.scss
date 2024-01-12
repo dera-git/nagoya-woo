@@ -1,0 +1,54 @@
+.kl-cart-page{
+    .site-main{
+        article{
+            header{
+                display: none;
+            }
+        }
+    }
+    .woocommerce-notices-wrapper{
+        background: $green_theme;
+        color: $gold;
+        text-align: start !important;
+        .woocommerce-message{
+            background: $green_theme;
+            color: $gold;
+            margin: 0 !important;
+            border-top-color: $gold;
+            &::before{
+                color: $gold;
+            }
+        }
+        .handleClose{
+            display: none;
+        }
+    }
+
+    .cart-empty{
+        border: none;
+        background-color: $green-theme;
+        font-family: $garamond;
+        font-size: 20px;
+        font-style: italic;
+        color: $white;
+        &::before{
+            display: none;
+        }
+    }
+
+    .shipping-calculator-button {
+        color: $black;
+    }
+}
+
+.kl-woocommerce-cart-table tbody {
+    .product-name {
+        a {
+            color: $black;
+        }
+    }
+} 
+
+.shop_table tbody td a {
+    color: $black;
+}

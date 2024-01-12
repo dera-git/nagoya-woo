@@ -1,0 +1,178 @@
+.kl-site-header{
+    padding: 45px 0;
+    @include media-breakpoint-down(md){
+        padding: 30px 0;
+    }
+}
+.kl-navbar-toggler{
+    width: 25px;
+    border: none;
+    background: transparent;
+    span{
+        background: $gold;
+        height: 3px;
+        display: block;
+        width: 100%;
+        & + span{
+            margin-top: 2px;
+        }
+    }
+}
+.kl-navbar-collapse{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: $white;
+    z-index: 10;
+    .container{
+        padding-top: 115px;
+        padding-bottom: 193px;
+        @include media-breakpoint-down(xxl_1680){
+            padding-top: 50px;
+            padding-bottom: 60px;
+        }
+        @include media-breakpoint-down(lg){
+            min-height: calc(100vh - 150px);
+        }
+        @include media-breakpoint-down(md){
+            min-height: calc(100vh - 105px);
+        }
+    }
+}
+header .kl-navbar{
+    border-bottom: 1px solid $grey;
+    padding-bottom: 10px !important;
+    @include media-breakpoint-down(lg){
+        padding-bottom: 25px !important;
+    }
+    li{
+        a{
+            @include text_14();
+            font-weight: $light;
+            color: $black;
+            &.nav-link{
+                text-transform: uppercase;
+                font-weight: $medium;
+                @include media-breakpoint-down(xxl){
+                    white-space: inherit;
+                }
+                @include media-breakpoint-down(lg){
+                    width: 100%;
+                    br{
+                        display: none;
+                    }
+                }
+                @include media-breakpoint-down(md){
+                    text-align: center !important;
+                }
+                &::after{
+                    @include media-breakpoint-up(lg){
+                        display: none;
+                    }
+                    @include media-breakpoint-down(lg){
+                        margin-left: 12px;
+                    }
+                }
+            }
+            &.dropdown-item{
+                padding: 5px 8px;
+                white-space: initial;
+                transition: all .25s;
+                &:hover, &.active{
+                    background-color: transparent !important;
+                    color: $gold;
+                }
+            }
+        }
+    }
+    .dropdown-menu{
+        border: none;
+        margin-top: 10px;
+        @include media-breakpoint-up(lg){
+            display: block;
+            position: relative !important;
+        }
+        @include media-breakpoint-down(lg){
+            text-align: center;
+        }
+    }
+}
+.kl-img-menu-wrapper{
+    flex: 0 0 auto;
+    width: 281px;
+    height: 386px;
+    margin-right: 88px;
+    @include media-breakpoint-down(xxl_1680){
+        margin-right: 25px;
+        width: 245px;
+    }
+    @include media-breakpoint-down(xxl){
+        width: 220px;
+        margin-right: 15px;
+    }
+    @include media-breakpoint-down(xl){
+        display: none;
+    }
+}
+.kl-navbar-contact{
+    margin-top: 40px;
+}
+.kl-header-contact{
+    @include media-breakpoint-up(lg){
+        margin-left: 52px !important;
+    }
+    @include media-breakpoint-down(lg){
+        margin-left: 0 !important;
+    }
+    li{
+        a{
+            @include text_14();
+            font-weight: $light;
+            color: $black;
+        }
+    }
+}
+.kl-contact-items{
+    border-left: 1px solid $grey;
+    @include media-breakpoint-up(lg){
+        padding-left: 52px;
+    }
+    @include media-breakpoint-down(lg){
+        padding-left: 0;
+        border: none;
+    }
+    &:not(:last-of-type){
+        @include media-breakpoint-up(lg){
+            padding-right: 52px;
+        }
+        @include media-breakpoint-down(lg){
+            padding-right: 0;
+        }
+    }
+    & + .kl-contact-items{
+        @include media-breakpoint-down(lg){
+            margin-top: 15px;
+        }
+    }
+}
+.kl-social-network{
+    li{
+        & + li{
+            margin-left: 5px;
+        }
+        a{
+            opacity: 1;
+            transition: all .25s;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}
+.kl-navbar-brand{
+    @include media-breakpoint-down(sm){
+        img{
+            width: 135px;
+        }
+    }
+}

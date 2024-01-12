@@ -1,0 +1,126 @@
+8 juin 2022 - Version 2.4.4
+[Fix] Suppression d’un avertissement PHP introduit dans la version précédente.
+
+2 juin 2022 - Version 2.4.3
+[Fix] Désactivation, sur la page de Monetico, des paiements partenaires actifs mais hors plafonds.
+[Fix] Prise en charge de l’heure locale dans l’information sur l’échéance de la licence.
+[Fix] Suppression de notices php qui se produisent lorsque les réglages de la passerelle n’ont pas été enregistrés depuis l’ajout de certaines options.
+
+9 avril 2022 - Version 2.4.2
+[New] Information sur l’échéance proche de la licence de la passerelle de paiement.
+
+5 avril 2022 - Version 2.4.1
+[Fix] Vérification que les constantes MONETICOPAIEMENT_URLOK et MONETICOPAIEMENT_URLKO sont définies dans MoneticoPaiement_Ept.inc.php.
+[Fix] Transmission des constantes vides MONETICOPAIEMENT_URLOK et MONETICOPAIEMENT_URLKO depuis la fonction de remboursement pour ne pas déclencher d’erreur sous php 8.
+
+1er avril 2022 - Version 2.4
+[New] Intégration de l’option « iframe » pour proposer le paiement directement sur le site marchand. Nécessite l’option sur votre contrat Pack+ Monetico.
+[Fix] Suppression d’une Notice PHP.
+[Fix] Suppression d’un « screen_icon » déprécié dans le code du gestionnaire de licences.
+
+22 février 2022 - Version 2.3.1
+[New] Ajout du filtre « monetico_change_montant_a_payer » pour modifier le montant à payer avant envoi en banque. A manipuler avec précaution car cela n’affecte que le paiement et non le montant de la commande WooCommerce.
+[Fix] Suppression d’une Notice PHP.
+
+21 février 2022 - Version 2.3
+[New] Intégration de l’option « Paiement express » avec gestion du portefeuille de cartes depuis le tableau de bord.
+[New] Ajout de l’action « monetico_tableau_retour_banque » pour récupérer un tableau des données renvoyées par la banque après paiement.
+[Maj] Renommage du fichier de logs par défaut en « monetico.log ».
+
+24 décembre 2021 - Version 2.2.3
+[Fix] Oups ! Un vieux fichier trainait dans l’archive. 🎅 Joyeux Noël 🎄 !
+
+23 décembre 2021 - Version 2.2.2
+[Fix] Correction d’une erreur insérant « Paiement par carte bancaire confirmé. » dans l’e-mail d’une commande en cours même si le moyen de paiement n’est pas Monetico.
+[Maj] Adaptation du message de paiement confirmé, au moyen de paiement partenaire correspondant, dans l’e-mail d’une commande en cours.
+[Maj] Nettoyage de code spécifique WooCommerce < 3.0.
+
+20 décembre 2021 - Version 2.2.1
+[Fix] Correction d’une erreur dans la prise en charge de l’URL CGI2 Nx si la passerelle Monetico Nx est toujours utilisée.
+
+17 décembre 2021 - Version 2.2
+[New] Intégration du paiement en plusieurs fois 2x, 3x et 4x. Nécessite un contrat Monetico paiement fractionné.
+[Maj] Prise en charge de l'URL CGI2 au format terminaison : https//votresite.fr/wc-api/wc_gateway_monetico. L’URL CGI2 historique https//votresite.fr/?wc-api=WC_Gateway_Monetico reste fonctionnelle, ainsi que l’URL CGI2 de la passerelle Monetico Nx https//votresite.fr/?wc-api=WC_Gateway_Monetico_Nx.
+[Maj] Nettoyage de code spécifique WooCommerce < 3.0.
+
+21 octobre 2021 - Version 2.1.4
+[New] Ajout de l'argument $order dans le filtre monetico_change_texte_libre pour permettre le passage d'éléments de la commande vers Monetico pour le rapprochement bancaire (nom du client par exemple, voir le fichier d'instructions).
+[Fix] Compatibilité PHP 8.0. Correction de code php déprécié dans MoneticoPaiement_Ept.inc.php.
+[Fix] Mise à jour du code source.
+[Fix] Suppression de warnings PHP.
+[Fix] La fonction load_plugin_textdomain était appelée deux fois. Appel de la fonction sur l'action init.
+
+7 décembre 2020 - Version 2.1.3
+[Fix] Correction d'une erreur introduite sur la version 2.1.1 sur la gestion des seuils des moyens de paiement partenaires.
+
+5 octobre 2020 - Version 2.1.2
+[Fix] Nouvelle correction de Notices sur les moyens de paiement partenaires lorsque les réglages des versions 2.1 et 2.1.1 n'ont jamais été enregistrés.
+
+24 septembre 2020 - Version 2.1.1
+[New] Adaptation du titre de la page « Commande reçue » en cas de problème de paiement, « Paiement non reçu », « Paiement en attente de confirmation » ou « Erreur de paiement ! » suivant la situation !
+[Maj] Allègement du code des classes partenaires héritées.
+[Fix] Correction de Notices sur les moyens de paiement partenaires lorsque les réglages de la version 2.1 n'ont jamais été enregistrés.
+
+12 juin 2020 - Version 2.1
+[New] Intégration des moyens de paiement partenaires directement dans WooCommerce (1euro, 3xCB Cofidis, 4xCB Cofidis, Paypal, lyf pay).
+[New] Ajout du filtre monetico_change_texte_libre pour passer du contenu dans le texte libre qui sera consultable sur le tableau de bord de Monetico. Contient l'e-mail du client par défaut.
+[Fix] Utilisation de home_url() pour générer l'URL retour CGI2.
+[Fix] Correction de Notices.
+
+10 mars 2020 - Versin 2.0.5
+[Fix] Pour 3DS2 les champs des lignes 2 des adresses de facturation et de livraison ne doivent plus être transmises à Monetico lorsqu'elles sont vides.
+[Fix] Correction d'un problème avec les mises à jour depuis WordPress, WooCommerce insère un espace devant la réponse du serveur.
+
+15 février 2020 - Version 2.0.4
+[Fix] Oubli d'un $ dans le filtre de expedition_ville.
+[Maj] Conflit entre WooCommerce API Manager intégré à la passerelle pour le gestion de la licence et d'autres extensions, par exemple Admin Menu Editor.
+
+11 février 2020 - Version 2.0.3
+[Maj] Limitation de la longueur des champs transmis pour 3DSecure 2 au nombre de caractères autorisés.
+
+11 février 2020 - Version 2.0.2
+[Maj] Nettoyage des champs transmis pour 3DSecure 2 pour supprimer les caractères bloquants (double cote, slash, etc.).
+[New] Ajout d'une série de 15 filtres sur les champs transmis pour 3DSecure. Permet de forcer les valeurs de certains champs obligatoires mais absents de la page de commande. Par exemple monetico_change_facturation_pays pour forcer le pays de facturation à FR si le champ pays a été supprimé de la page de commande.
+[New] Ajout du paramètre ThreeDSecureChallenge et du filtre correspondant monetico_change_ThreeDSecureChallenge pour le souhait commerçant concernant le challenge 3DSecure v2.X.
+
+9 septembre 2019 - Version 2.0.1
+[Fix] Suppression d'un Warning sur un function_exists.
+
+6 septembre 2019 - Version 2.0
+[New] Compatibilité 3DSecure 2.
+[New] Dans le cas d'un refus de paiement pour filtrage sur les critères du commerçant, la valeur ayant déclenché le filtrage complète la cause du filtrage. Exemple : "Pays de la carte (CHN)" si le commerçant a bloqué les cartes bancaires de Chine.
+[Fix] get_date_paid utilisé à la place de get_date_completed dans la fonction de remboursement car l'on peut rembourser depuis le statut "en cours".
+
+17 juillet 2019 - Version 1.2.3
+[New] Ajout de la possibilité de faire des remboursements en mode TEST.
+[New] Ajout d'un filtre monetico_change_montant_paye pour permettre de modifier le montant de la commande affiché sur la page de remerciement, par exemple pour un paiement d'acompte.
+[Maj] Gestion d'une méthode dépréciée WC 3.0 pour les remboursements.
+[Maj] Distinction des URLs retour OK et retour KO pour gérer un message d'erreur et un lien vers un nouveau paiement lorsque le client annule son paiement depuis Monetico.
+[Fix] Les dernières versions de WooCommerce ne permettaient plus de traduire la description du moyen de paiement, appel de get_description() directement dans payment_fields().
+[Fix] Suppression de Notices PHP.
+
+19 janvier 2019 - Version 1.2.2
+[Fix] Correction d'une erreur dans le nom du transient qui confirme le retour de banque.
+
+4 janvier 2019 - Version 1.2.1
+[New] Si l'établissement bancaire ne confirme pas le statut du paiement (erreur ou délai de retour), des messages adaptés remplacent les messages d'erreur de paiement supposée sur la page de retour du client.
+[Maj] Modifications pour prendre en charge l'onglet Paiements de WooCommerce 3.4 (nouveau descriptif du moyen de paiement, lien de retour).
+[Fix] Suppression de Notices PHP.
+
+13 décembre 2017 - Version 1.2
+[Maj] Prise en compte des filtres sur les éléments bancaires (TPE, code société, Clé) en retour de banque. Permet de gérer plusieurs contrats depuis la passerelle. Ajout d'un exemple de filtre dans les instructions.
+
+3 avril 2017 - Version 1.1
+[Maj] Gestion des méthodes dépréciées de WooCommerce 3.0.
+
+2 décembre 2016 - Version 1.0.3
+[New] Ajout des filtres monetico_change_devise et monetico_change_langue pour permettre la modification de la devise et de la langue sans passer par une extension de traduction. 
+
+17 novembre 2016 - Version 1.0.2
+[Fix] Remplacement de get_bloginfo('wpurl') par get_bloginfo('url') pour les sites installés dans un dossier. 
+
+7 novembre 2016 - Version 1.0.1
+[New] Gestion des statuts sous la forme d'un tableau sur la page remerciement et filtrage de ce tableau pour permettre l'ajout de statuts personnalisés, comme par exemple WooCommerce Deposit et son statut partially-paid.
+
+12 octobre 2015 - Version 1.0
+Version initiale de la passerelle de paiement. Passerelle adapatée et améliorée de la passerelle CMCIC suite au changement d'identité vers Monetico Paiement.

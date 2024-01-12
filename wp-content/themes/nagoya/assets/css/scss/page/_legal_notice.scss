@@ -1,0 +1,11 @@
+.kl-legal-notice{
+    text-align: center;
+    margin: 127px 0 105px;
+    font-weight: $light;
+    @include media-breakpoint-down(md){
+        margin: 63px 0 52px;
+    }
+}
+.kl-title-legal-notice{
+    padding-bottom: 39px;
+}

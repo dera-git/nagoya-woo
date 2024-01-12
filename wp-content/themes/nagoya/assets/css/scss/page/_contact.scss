@@ -1,0 +1,65 @@
+.kl-contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .kl-social-network {
+        justify-content: center;
+    }
+    .kl-logo {
+        max-width: 250px;
+    }
+    .kl-site-title {
+        color: $gold;
+        font-weight: $bold;
+        font-size: 50px;
+    }
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        label {
+            font-weight: $bold;
+        }
+
+        input:not([type="submit"]) {
+            border: 0;
+            border-bottom: 1px solid $gold;
+        }
+
+        input[type="submit"]{
+            color: #9B8450;
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: 400;
+            font-style: italic;
+            background: transparent;
+            padding: 6px 15px 5px;
+            border: 1px solid #9B8450;
+            border-radius: 0;
+            height: 33px;
+            transition: all 0.3s;
+
+            &:hover {
+                color: #ffffff;
+                background: #9B8450;
+            }
+        }
+
+        textarea {
+            border-color: $gold;
+        }
+
+        input, textarea {            
+            width: 100%;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .kl-form-contact {
+            order: 2;
+        }
+
+        .kl-coordonnee {
+            order: 1;
+        }
+
+    }
+}

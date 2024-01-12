@@ -1,0 +1,252 @@
+body {
+  font-family: $avenir;
+  font-size: 16px;
+  font-weight: $regular;
+  color: $black;
+  min-height: 100vh;
+  @include media-breakpoint-down(md){
+    font-size: 15px
+  }
+}
+
+//bg & color
+@each $color, $value in $theme_colors {
+  .kl-bg-#{$color} {
+    @include bg_variant($value);
+  }
+  .kl-color-#{$color} {
+    @include color_variant($value);
+  }
+}
+
+//font weight
+@each $name, $value in $font_weight {
+  .kl-fw-#{$name} {
+    @include font_weight($value);
+  }
+}
+
+//font weight
+@each $name, $value in $font_familly {
+  .kl-ff-#{$name} {
+    @include font_familly($value);
+  }
+}
+
+//z-index
+@each $val, $value in $line_height {
+  .kl-lh-#{$val} {
+    @include line_height($value);
+  }
+}
+
+//z-index
+@each $val, $value in $z_index {
+  .kl-z-index-#{$val} {
+    @include z_index($value);
+  }
+}
+
+// Separator Heigth
+@each $space, $value_space in $separator_height{
+  .kl-h-#{$space}{
+    &::before{
+      height: #{$value_space};
+    }
+  }
+}
+
+//max-width , space margin padding and gutter breakpoint
+@each $space, $value_space in $max_value{
+  .kl-max-w-#{$space}{
+    max-width: #{$value_space};
+  }
+}
+
+@each $space, $value_space in $spacing{
+  .kl-gx-#{$space}{
+    --bs-gutter-x: #{$value_space};
+  }
+  .kl-gy-#{$space}{
+    --bs-gutter-y: #{$value_space};
+  }
+  @each $side_value, $side_values in $sides-direction{
+    .kl-m#{$side_value}-#{$space}{
+      margin-#{$side_values}:#{$value_space} !important;
+    }
+    .kl-m#{$side_value}-n-#{$space}{
+      margin-#{$side_values}: -#{$value_space} !important;
+    }
+    .kl-p#{$side_value}-#{$space}{
+      padding-#{$side_values}: #{$value_space} !important;
+    }
+  }
+}
+
+//max-width , space margin padding and gutter breakpoint
+@each $breakpoint in map-keys($bs-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    @each $space, $value_space in $max_value{
+      .kl-max-w-#{$breakpoint}-#{$space}{
+        max-width: #{$value_space};
+      }
+    }
+    @each $space, $value_space in $spacing{
+      .kl-gx-#{$breakpoint}-#{$space}{
+        --bs-gutter-x: #{$value_space};
+      }
+      .kl-gy-#{$breakpoint}-#{$space}{
+        --bs-gutter-y: #{$value_space};
+      }
+      @each $side_value, $side_values in $sides-direction{
+        .kl-m#{$side_value}-#{$breakpoint}-#{$space}{
+          margin-#{$side_values}: #{$value_space} !important;
+        }
+        .kl-p#{$side_value}-#{$breakpoint}-#{$space}{
+          padding-#{$side_values}: #{$value_space} !important;
+        }
+      }
+    }
+  }
+}
+
+// container
+@include media-breakpoint-up(xxl_1680){
+  .kl-container-xl-1664{
+    max-width: 1664px;
+  }
+}
+h1, h2, h3, h4, h5, p, ul{
+  margin-bottom: 0;
+}
+a{
+  text-decoration: none;
+}
+a, button, input{
+  &:focus{
+    outline: none;
+  }
+}
+.kl-img-cover{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+.kl-separator-line{
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    background: $gold;
+    width: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}
+.kl-separator-down-md::before{
+    @include media-breakpoint-up(md){
+      background: transparent;
+  }
+}
+.kl-separator-top{
+  top: -56px;
+}
+.kl-main-content{
+  padding-bottom: 130px;
+  @include media-breakpoint-down(md){
+    padding-bottom: 60px;
+  }
+}
+.kl-h-mob-72{
+  &::before{
+    @include media-breakpoint-down(md){
+      height: 72px;
+    }
+  }
+}
+.kl-link-black{
+  a{
+    color: $black;
+  }
+}
+
+%before-theme{
+  content: '';
+  position: absolute;
+  background: $green-theme;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+}
+
+@include media-breakpoint-up(xxl_1366){
+  .kl-container-1112{
+    max-width: 1112px;
+  }
+}
+
+.kl-btn-border-noir{
+  border-color: $black !important;
+  color: $black !important;
+  font-weight: bold !important;
+  &:hover{
+    color: $white !important;
+    border-color: $white !important
+  }
+}
+
+.kl-letter-space-2{
+  letter-spacing: 2px;
+}
+.kl-fw-light{
+  b, strong{
+    font-weight: $medium !important;
+  }
+}
+
+.kl-content-precommand .kl-form-precommande {
+  display: none;
+}
+
+.woocommerce-message::before {
+  color: $gold !important;
+}
+
+.woocommerce .woocommerce-error .button, 
+.woocommerce .woocommerce-info .button, 
+.woocommerce .woocommerce-message .button, 
+.woocommerce-page .woocommerce-error .button, 
+.woocommerce-page .woocommerce-info .button, 
+.woocommerce-page .woocommerce-message .button,
+.woocommerce-button.view {
+  color: $gold !important;
+  font-size: 15px !important;
+  line-height: 20px !important;
+  font-weight: $regular !important;
+  font-style: italic;
+  background: transparent;
+  padding: 6px 15px 5px !important;
+  border: 1px solid $gold !important;
+  border-radius: 0 !important;
+  height: 33px;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $white !important;
+    background: $gold !important;
+  }
+}
+
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt {
+  background-color: $gold;
+  transition: background .15s ease-in-out;
+  &:hover {
+    background-color: darken($gold, 5%);
+  }
+}
+.fc-checkout-step #billing_email-description{ display:none !important;}
+a.fc-contact-login__action, div.woocommerce .fc-expansible-form-section .expansible-section__toggle-plus{ color: $gold !important; }

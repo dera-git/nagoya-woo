@@ -1,0 +1,154 @@
+.kl-sect-haute-joaillerie{
+    padding: 190px 0 0;
+    position: relative;
+    &::after{
+        content: "";
+        background: $white;
+        position: absolute;
+        width: 100%;
+        height: 345px;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .kl-post-thumbnail{
+        position: relative;
+        z-index: 1;
+        img{
+            max-width: 1088px;
+            width: 100%;
+            text-align: center;
+            object-fit: cover;
+        }
+    }
+    .kl-description{
+        font-style: italic;
+        font-size: 20px;
+        font-family: $garamond;
+    }
+}
+.kl-haute-joaillerie{
+    .kl-prix{
+        padding: 77px 0 58px;
+        font-size: 25px;
+        font-family: $garamond;
+        font-style: italic;
+        @include media-breakpoint-down(md){
+            padding: 37px 0 18px;
+        }
+    }
+    .kl-information-prix{
+        font-weight: $light;
+        line-height: 30px;
+    }
+}
+
+.kl-sect-piece{
+    padding: 70px 0 65px;
+    @include media-breakpoint-down(md){
+        padding: 10px 0 15px;
+    }
+    .kl-post-thumbnail{
+        img{
+            max-width: 640px;
+            width: 100%;
+        }
+    }
+}
+.kl-sect-conception{
+    padding: 65px 0 100px;
+    @include media-breakpoint-down(md){
+        padding: 5px 0 60px;
+    }
+}
+.kl-conception-video{
+    height: 513px;
+}
+.kl-conception-galleries{
+    margin-top: 28px;
+    padding-bottom: 30px;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 470px;
+        background: $green-theme;
+        z-index: -1;
+        @include media-breakpoint-down(xxl){
+            height: 370px;
+        }
+        @include media-breakpoint-down(xxl){
+            height: 180px;
+        }
+    }
+    .kl-post-thumbnail{
+        @include media-breakpoint-down(md){
+            margin-bottom: 28px;
+        }
+        img{
+            max-width: 529px;
+            width: 100%;
+            max-height: 793px;
+            height: 100%;
+        }
+    }
+}
+.kl-section-icons-2{
+    padding: 70px 0 120px;
+    @include media-breakpoint-down(md){
+        padding: 20px 0 70px;
+    }
+}
+
+.kl-chapitre1-conception-wrapper{
+    padding: 110px 0 10px;
+    .kl-prod-conception{
+        @include media-breakpoint-down(md){
+            padding-top: 10px;
+        }
+        .post-title{
+            a{
+                color: $black !important;
+                font-size: 15px;
+                font-weight: $semi_bold;
+            }
+        }
+        .post-content{
+            color: $black !important;
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.kl-img-advantages{
+    max-width: calc(100% - 60px);
+    margin-left: auto;
+    height: 640px;
+    @include media-breakpoint-down(xl){
+        max-width: 100%;
+    }
+    @include media-breakpoint-down(md){
+        height: 300px;
+    }
+}
+.kl-desc-advantages{
+    padding-right: 95px;
+    @include media-breakpoint-down(xxl){
+        padding-right: 45px;
+    }
+    @include media-breakpoint-down(xl){
+        padding-right: 25px;
+    }
+    @include media-breakpoint-down(md){
+        padding-right: 0;
+    }
+    .kl-btn-theme{
+        @include media-breakpoint-down(md){
+            margin: auto;
+        }
+    }
+}
